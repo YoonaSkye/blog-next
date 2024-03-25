@@ -5,6 +5,7 @@ import { buttonVariants } from './ui/button';
 import { Icons } from './incons';
 import MainNav from './main-nav';
 import MobileNav from './mobile-nav';
+import ModeToggle from './mode-toggle';
 
 export default function SiteHeader() {
   return (
@@ -43,6 +44,7 @@ export default function SiteHeader() {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
+            <ModeToggle />
             <MobileNav />
           </nav>
         </div>
