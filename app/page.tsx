@@ -2,8 +2,8 @@ import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (
-    <main>
+    <section>
       Blog Template<Button>Nice!</Button>
-    </main>
+    </section>
   );
 }
