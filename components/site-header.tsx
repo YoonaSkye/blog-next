@@ -2,7 +2,7 @@ import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { buttonVariants } from './ui/button';
-import { Icons } from './incons';
+import { Icons } from './icons';
 import MainNav from './main-nav';
 import MobileNav from './mobile-nav';
 import ModeToggle from './mode-toggle';
