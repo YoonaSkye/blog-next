@@ -11,7 +11,7 @@
 }
 
 .mask_image {
-  position: fixed;
+  position: fixed;;
   mask-image: radial-gradient(circle, transparent, #171717);
   --webkit-mask-image: radial-gradient(circle, transparent, #171717);
 }

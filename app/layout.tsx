@@ -6,7 +6,7 @@ import './globals.css';
 import Provider from '@/components/provider';
 import SiteFooter from '@/components/site-footer';
 import SiteHeader from '@/components/site-header';
-import Plum from '@/features/home/components/plum';
+// import Plum from '@/features/home/components/plum';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -21,21 +21,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-pt-[3.5rem]">
+    <html lang="en" className="scroll-pt-[3.5rem]" suppressHydrationWarning>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
           inter.variable
         )}
+        suppressHydrationWarning
       >
         <Provider>
           <div className="relative flex min-h-dvh flex-col bg-background">
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
-            <Plum />
           </div>
         </Provider>
+        {/* BUG: plum 组件加载后，页面被屏蔽，无法点击 */}
+        {/* <Plum /> */}
       </body>
     </html>
   );
