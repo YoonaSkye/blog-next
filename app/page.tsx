@@ -1,7 +1,7 @@
-import { sortPosts } from '@/lib/utils';
 import { posts } from '#site/content';
 import PostItem from '@/components/post-item';
 import HeroSection from '@/features/home/components/hero-section';
+import { sortPosts } from '@/lib/utils';
 
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);

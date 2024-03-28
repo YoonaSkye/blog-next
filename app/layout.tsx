@@ -1,11 +1,12 @@
+import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { cn } from '@/lib/utils';
 
 import Provider from '@/components/provider';
 import SiteFooter from '@/components/site-footer';
 import SiteHeader from '@/components/site-header';
+import Plum from '@/features/home/components/plum';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
+            <Plum />
           </div>
         </Provider>
       </body>
