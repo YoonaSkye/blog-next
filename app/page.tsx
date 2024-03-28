@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="pb-8 pt-6 md:pb-12 lg:py-32">
+      <section className="pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32 lg:my-0">
         <HeroSection />
       </section>
       <section className="container max-w-4xl py-6 lg:py-10 flex flex-col space-y-6 mt-60">
