@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 import { Menu } from 'lucide-react';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Icons } from './icons';
+import { Icons } from '../icons';
 import { siteConfig } from '@/config/site';
 
 export default function MobileNav() {
