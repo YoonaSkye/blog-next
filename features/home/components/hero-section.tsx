@@ -1,15 +1,18 @@
-import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import TypeIntro from './type-intro';
 
-export default function HeroSection() {
+import { buttonVariants } from '@/components/ui/button';
+
+import { cn } from '@/lib/utils';
+import { TypeIntro } from './type-intro';
+
+export const HeroSection = () => {
   let delay = 0;
 
   // 每次调用，增加延时
   const getDelay = () => (delay += 200);
+
   return (
-    <div className="container flex flex-col justify-center gap-4 max-w-screen-md 2xl:max-w-7xl">
+    <div className="mx-auto max-w-screen-md 2xl:max-w-7xl  gap-5 flex flex-col justify-center min-h-full px-6 md:px-10">
       <p
         className="text-2xl md:text-5xl tracking-widest animate-fade-up animate-ease-in-out"
         style={{
@@ -85,4 +88,4 @@ export default function HeroSection() {
       </div>
     </div>
   );
-}
+};

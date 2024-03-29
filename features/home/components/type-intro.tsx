@@ -2,7 +2,7 @@
 
 import { TypeAnimation } from 'react-type-animation';
 
-export default function TypyIntro() {
+export function TypeIntro() {
   return (
     <TypeAnimation
       className="text-2xl md:text-5xl tracking-widest"
