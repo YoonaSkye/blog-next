@@ -12,14 +12,14 @@ export const HeroSection = () => {
   const getDelay = () => (delay += 200);
 
   return (
-    <div className="mx-auto max-w-screen-md 2xl:max-w-7xl  gap-5 flex flex-col justify-center min-h-full px-6 md:px-10">
+    <div className="flex min-h-full max-w-screen-md flex-col justify-center gap-5 px-6 md:px-10 2xl:max-w-7xl">
       <p
-        className="text-2xl md:text-5xl tracking-widest animate-fade-up animate-ease-in-out"
+        className="animate-fade-up text-2xl tracking-widest animate-ease-in-out md:text-5xl"
         style={{
           animationDelay: `${getDelay()}ms`,
         }}
       >
-        您好，我是
+        你好，我是
       </p>
       <strong
         className={cn(
@@ -31,7 +31,7 @@ export const HeroSection = () => {
           animationDelay: `${getDelay()}ms`,
         }}
       >
-        YoonaSkye
+        廖科宇
       </strong>
       <div
         className={cn('animate-fade-up animate-ease-in-out')}
@@ -52,8 +52,8 @@ export const HeroSection = () => {
       >
         喜欢
         <span className={`font-semibold text-[#00d8ff]`}>React</span>、
-        <span className={`font-semibold text-[#007acc]`}>TypeScript</span>和
-        <span className={`font-semibold text-[#00b4e0]`}>Next</span>
+        <span className={`font-semibold text-[#007acc]`}>TypeScript</span>
+        {/* <span className={`font-semibold text-[#00b4e0]`}>Next</span> */}
         <span className="ml-4">\owo/ ~</span>
       </p>
       <p

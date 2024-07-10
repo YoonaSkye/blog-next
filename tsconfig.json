@@ -17,6 +17,9 @@
         "name": "next"
       }
     ],
+    
+     /* Path Aliases */
+     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "#site/content": ["./.velite"]

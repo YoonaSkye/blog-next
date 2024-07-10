@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import { fontFamily } from 'tailwindcss/defaultTheme';
+import { addDynamicIconSelectors } from '@iconify/tailwind';
 
 const config = {
   darkMode: ['class'],
@@ -12,16 +13,29 @@ const config = {
   ],
   prefix: '',
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
+    screens: {
+      sm: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      // 基础版心
+      wrapper: '1200px',
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1440px',
+      // => @media (min-width: 1440px) { ... }
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
+        sans: ['Ubuntu Sans Variable', 'PingFang', ...fontFamily.sans],
+        mono: ['Ubuntu Mono', ...fontFamily.mono],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -83,6 +97,8 @@ const config = {
     require('tailwindcss-animate'),
     require('@tailwindcss/typography'),
     require('tailwindcss-animated'),
+    // Iconify plugin
+    addDynamicIconSelectors(),
   ],
 } satisfies Config;
 
