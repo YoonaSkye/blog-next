@@ -3,8 +3,9 @@ import GitHub from 'next-auth/providers/github';
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import { PrismaClient } from '@prisma/client';
 import { PATHS } from '@/constants';
+import prisma from './prisma';
 
-const prisma = new PrismaClient();
+// export const prisma = new PrismaClient();
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -15,7 +16,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   pages: {
     signIn: PATHS.AUTH_SIGN_IN,
   },
-  debug: process.env.NODE_ENV === 'development',
+  // debug: process.env.NODE_ENV === 'development',
   callbacks: {
     authorized({ request, auth }) {
       // 将来用作 Next.js middleware，如果是访问后台页面，校验是否登录
