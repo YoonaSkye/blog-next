@@ -6,6 +6,8 @@
 @import "@fontsource-variable/ubuntu-sans";
 @import "@fontsource/ubuntu-mono";
 
+@import "bytemd/dist/index.css";
+
 @layer base {
   :root {
     --background: 0 0% 100%;

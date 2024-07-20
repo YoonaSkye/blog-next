@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { BytemdEditor } from '@/components/bytemd';
 
 export function CreateBlogForm() {
   const form = useForm<CreateBlogDTO>({
@@ -91,6 +92,25 @@ export function CreateBlogForm() {
                   value={field.value ?? ''}
                   placeholder="请输入作者"
                 />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="body"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>内容</FormLabel>
+              <FormControl>
+                <div id="content-editor">
+                  <BytemdEditor
+                    body={field.value}
+                    setContent={field.onChange}
+                  />
+                </div>
               </FormControl>
               <FormMessage />
             </FormItem>
